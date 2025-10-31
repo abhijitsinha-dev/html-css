@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Normalize CSS for consistent cross-browser styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Flipping Card</title>
+  </head>
+  <body>
+    <!-- Main section container with background and decorative elements -->
+    <section>
+      <!-- Container for the card flip animation (hover to flip) -->
+      <div class="container">
+        <!-- Front face of the credit card -->
+        <div class="card front-face">
+          <!-- Card header with logo and chip -->
+          <header>
+            <span class="logo">
+              <img src="./images/logo.png" alt="Master Card Logo" />
+              <h5>Master Card</h5>
+            </span>
+            <img src="./images/chip.png" alt="Chip Logo" class="chip" />
+          </header>
+
+          <!-- Card details: card number, name, and expiration date -->
+          <div class="card-details">
+            <div class="name-number">
+              <h6>Card Number</h6>
+              <h5 class="number">8050 2030 3020 5040</h5>
+              <h5 class="name">Abhijit Sinha</h5>
+            </div>
+
+            <div class="valid-date">
+              <h6>Valid Thru</h6>
+              <h5>05/28</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back face of the credit card -->
+        <div class="card back-face">
+          <!-- Customer service contact information -->
+          <h6>
+            For customer service call +91 1800 425 3800 or email at
+            gm.customer@sbi.co.in
+          </h6>
+          <!-- Magnetic strip on the back of the card -->
+          <span class="magnetic-strip"></span>
+          <!-- CVV code section -->
+          <div class="cvv"><i>000</i></div>
+          <!-- Terms and conditions text -->
+          <h5>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+            corporis impedit omnis. Ullam corrupti ex amet deserunt pariatur?
+            Voluptatibus corporis aliquid ut veritatis officiis et dolore minima
+            enim expedita praesentium!
+          </h5>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

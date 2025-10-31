@@ -1,0 +1,186 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main section - full viewport container with dark background */
+section {
+  position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: #121321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  /* Perspective property enables 3D transformations for the card flip */
+  perspective: 1000px;
+}
+
+/* Decorative circular gradient element - top left */
+section::before {
+  content: '';
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+  border-radius: 50%;
+  transform: translate(-150px, -100px);
+}
+
+/* Decorative circular gradient element - bottom right */
+section::after {
+  content: '';
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+  border-radius: 50%;
+  transform: translate(150px, 100px);
+}
+
+/* Card container - enables 3D flip animation on hover */
+.container {
+  position: relative;
+  height: 225px;
+  width: 375px;
+  z-index: 100;
+  /* Smooth transition for the flip animation */
+  transition: 0.6s;
+  /* Preserves 3D transformations for child elements */
+  transform-style: preserve-3d;
+}
+
+/* Flip the card 180 degrees on hover */
+.container:hover {
+  transform: rotateY(180deg);
+}
+
+/* Base card styling - glassmorphism effect with frosted glass appearance */
+.container .card {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  /* Semi-transparent white background */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  /* Blur effect creates the frosted glass look */
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  position: absolute;
+  /* Hides the back face when not visible (important for flip animation) */
+  backface-visibility: hidden;
+}
+
+/* Front face header and logo layout */
+.front-face header,
+.front-face .logo {
+  display: flex;
+  align-items: center;
+}
+
+.front-face header {
+  justify-content: space-between;
+}
+
+.front-face .logo img {
+  width: 48px;
+  margin-right: 10px;
+}
+
+/* Typography styles */
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.front-face .chip {
+  width: 50px;
+}
+
+/* Card details section - card number, name, and expiration date */
+.front-face .card-details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+h6 {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* Card number with increased letter spacing for readability */
+h5.number {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+h5.name {
+  margin-top: 20px;
+}
+
+/* Back face of the card - rotated 180deg so it's initially hidden */
+.card.back-face {
+  border: none;
+  padding: 15px 25px 25px 25px;
+  /* Pre-rotate so it appears correctly when flipped */
+  transform: rotateY(180deg);
+}
+
+.card.back-face h6 {
+  font-size: 8px;
+}
+
+/* Black magnetic strip on the back of the card */
+.card.back-face .magnetic-strip {
+  height: 45px;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+/* CVV code section with striped pattern background */
+.back-face .cvv {
+  height: 40px;
+  width: 86%;
+  margin-top: 80px;
+  /* Creating a striped pattern effect */
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 3px,
+    #efefef 0px,
+    #efefef 9px
+  );
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* CVV number styling */
+.cvv i {
+  color: #000;
+  font-size: 12px;
+  margin-right: -30px;
+  background-color: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* Terms and conditions text on the back */
+.card.back-face h5 {
+  font-size: 8px;
+  margin-top: 15px;
+}

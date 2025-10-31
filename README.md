@@ -5,6 +5,7 @@ This repository contains a collection of small web-based projects, each organize
 ## Current Projects
 
 - [Profile Card](./profile-card/README.md): A modern and attractive profile card with social media links and user stats.
+- [Flipping Card](./flipping-card/README.md): A 3D flipping credit card with glassmorphism styling and hover animation.
 
 ## How This Repository is Organized
 
