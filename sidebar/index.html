@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Normalize.css for consistent cross-browser styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Custom stylesheet for sidebar -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <!-- Main container with background image -->
+    <div class="main-box">
+      <!-- Hidden checkbox used to toggle sidebar (CSS-only solution) -->
+      <input type="checkbox" id="checkbox" />
+
+      <!-- Open button - hamburger menu icon visible when sidebar is closed -->
+      <div class="btn-open">
+        <label for="checkbox">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <!-- Sidebar menu container -->
+      <div class="sidebar-menu">
+        <!-- Logo section at the top of sidebar -->
+        <div class="logo">
+          <a href="#">Abhijit</a>
+        </div>
+
+        <!-- Close button - X icon visible when sidebar is open -->
+        <div class="btn-close">
+          <label for="checkbox">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+
+        <!-- Navigation menu items -->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#"> <i class="fa-solid fa-qrcode"></i>Dashboard </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-link"></i>Shortcuts </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-bars-staggered"></i>Overview
+              </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-calendar-week"></i>Events </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-circle-question"></i>About </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-sliders"></i>Services </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-phone-volume"></i>Contact </a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-solid fa-comments"></i>Feedback </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social media links at the bottom of sidebar -->
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Font Awesome icon library -->
+  <script
+    src="https://kit.fontawesome.com/5df481bcf7.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

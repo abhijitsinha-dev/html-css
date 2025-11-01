@@ -1,0 +1,160 @@
+/* Import Poppins font family from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Universal reset - removes default margins, padding, and sets box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main container with background image */
+.main-box {
+  position: relative;
+  background: url('./keyboard-img.jpg') right no-repeat;
+  background-size: cover;
+  height: 100dvh; /* Dynamic viewport height for better mobile support */
+  width: 100%;
+}
+
+/* Sidebar menu styling */
+.main-box .sidebar-menu {
+  position: fixed;
+  height: 100dvh;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  left: -280px; /* Hidden off-screen by default */
+  transition: all 0.3s linear; /* Smooth slide animation */
+}
+
+/* Logo section at the top of sidebar */
+.sidebar-menu .logo {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Logo text styling */
+.sidebar-menu .logo a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 60px;
+  position: absolute;
+  left: 60px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* Menu container positioning */
+.sidebar-menu .menu {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+/* Individual menu item styling */
+.sidebar-menu .menu li {
+  margin-top: 8px;
+  padding: 14px 20px;
+  transition: all 0.3s linear;
+}
+
+/* Hover effect for menu items */
+.sidebar-menu .menu li:hover {
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Menu link text styling */
+.sidebar-menu .menu a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Menu icon styling */
+.sidebar-menu .menu i {
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+/* Social media links container */
+.sidebar-menu .social-media {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  cursor: pointer;
+}
+
+/* Social media icon styling */
+.sidebar-menu .social-media i {
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.6; /* Slightly transparent by default */
+  padding: 0 5px;
+  transition: all 0.2s linear;
+}
+
+/* Social media icon hover effect */
+.sidebar-menu .social-media i:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+
+/* Hide the checkbox (used for state management only) */
+#checkbox {
+  display: none;
+}
+
+/* Open button (hamburger menu) styling */
+.main-box .btn-open i {
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 1; /* Visible by default */
+  transition: all 0.3s linear;
+}
+
+/* Close button (X icon) styling */
+.sidebar-menu .btn-close i {
+  position: absolute;
+  left: 240px;
+  font-size: 25px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 0; /* Hidden by default */
+  transition: all 0.3s linear;
+}
+
+/* Hover effect for open button */
+.btn-open i:hover {
+  font-size: 29px;
+}
+
+/* Hover effect for close button */
+.btn-close i:hover {
+  font-size: 24px;
+}
+
+/* When checkbox is checked, slide sidebar into view */
+#checkbox:checked ~ .sidebar-menu {
+  left: 0;
+}
+
+/* When checkbox is checked, hide the open button */
+#checkbox:checked ~ .btn-open i {
+  opacity: 0;
+}
+
+/* When checkbox is checked, show the close button */
+#checkbox:checked ~ .sidebar-menu .btn-close i {
+  opacity: 1;
+}
