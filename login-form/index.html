@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8" />
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Normalize CSS for cross-browser consistency -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <!-- Main container for centering the form -->
+    <div class="container">
+      <!-- Form wrapper with white background -->
+      <div class="wrapper">
+        <!-- Header section with title -->
+        <div class="title"><span>Login Form</span></div>
+
+        <!-- Login form -->
+        <form action="#">
+          <!-- Email/Phone input field with icon -->
+          <div class="row">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Email or Phone" required />
+          </div>
+
+          <!-- Password input field with lock icon -->
+          <div class="row">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password" required />
+          </div>
+
+          <!-- Forgot password link -->
+          <div class="forgot">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <!-- Login submit button -->
+          <div class="row button">
+            <input type="submit" value="Login" />
+          </div>
+
+          <!-- Signup link section -->
+          <div class="signup">
+            Not a member?
+            <a href="#">Signup Now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <!-- Font Awesome icons library -->
+  <script
+    src="https://kit.fontawesome.com/5df481bcf7.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
