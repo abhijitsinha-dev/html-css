@@ -8,6 +8,7 @@ This repository contains a collection of small web-based projects, each organize
 - [Flipping Card](./flipping-card/README.md): A 3D flipping credit card with glassmorphism styling and hover animation.
 - [Sidebar](./sidebar/README.md): A sleek sliding sidebar menu with CSS-only toggle, glassmorphism design, and smooth animations.
 - [Login Form](./login-form/README.md): A clean and modern login form with icon-enhanced input fields, smooth focus transitions, and an attractive turquoise color scheme.
+- [Simple Website](./simple-website/README.md): A clean and modern landing page with fixed navigation bar, full-screen background image, centered hero content, and smooth hover animations.
 
 ## How This Repository is Organized
 

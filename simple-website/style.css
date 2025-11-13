@@ -1,0 +1,145 @@
+/* Import Google Fonts - Poppins font family with all weights */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation bar - fixed at top of page */
+nav {
+  position: fixed;
+  background-color: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Menu container - flexbox layout for logo and navigation */
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* Logo styling */
+.menu .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+/* Navigation menu list - horizontal flex layout */
+.menu ul {
+  display: inline-flex;
+  column-gap: 7px;
+}
+
+/* Remove default list styling */
+.menu ul li {
+  list-style: none;
+}
+
+/* Navigation link styling */
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 300ms ease;
+}
+
+/* Navigation link hover effect */
+.menu ul li a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Background image container - full viewport height */
+.img {
+  background: url(./website-bg.jpg) no-repeat;
+  width: 100%;
+  height: 100dvh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Dark overlay on background image for better text readability */
+.img::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Centered text overlay - positioned absolutely over background image */
+.center-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main title styling */
+.center-text .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+/* Subtitle styling */
+.center-text .sub-title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+/* Button container spacing */
+.center-text .btns {
+  margin-top: 20px;
+}
+
+/* Button base styling */
+.center-text .btns button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  margin: 0 10px;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  background-color: #fff;
+  transition: all 300ms ease;
+}
+
+/* First button - outlined style (transparent background) */
+.center-text .btns button:first-child {
+  color: #fff;
+  background: none;
+}
+/* First button hover effect - fills with white background */
+.center-text .btns button:first-child:hover {
+  color: #000;
+  background: #fff;
+}
